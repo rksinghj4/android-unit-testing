@@ -5,20 +5,24 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Test
 
-
 internal class HelperTest {
+    lateinit var helper: Helper
     @Before
     fun setUp() {
+        println("Before every test case")
+        helper = Helper()
     }
 
     @After
     fun tearDown() {
+        println("After every test case")
     }
 
     @Test
     fun isPalindrome_input_level_true() {
         //Arrange
-        val helper = Helper()
+        //helper = Helper()
+
         //Act
         val result = helper.isPalindrome("level")
         //Assert
@@ -28,7 +32,7 @@ internal class HelperTest {
     @Test
     fun isPalindrome_input_emptystring_true() {
         //Arrange
-        val helper = Helper()
+        //val helper = Helper()
         //Act
         val result = helper.isPalindrome("")
         //Assert
@@ -38,7 +42,7 @@ internal class HelperTest {
     @Test
     fun isPalindrome_input_ab_false() {
         //Arrange
-        val helper = Helper()
+        //val helper = Helper()
         //Act
         val result = helper.isPalindrome("ab")
         //Assert
